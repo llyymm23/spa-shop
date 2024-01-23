@@ -24,7 +24,8 @@ const ProductSchema = new mongoose.Schema({
   //상품상태
   status: {
     type: String,
-    // default: FOR_SALE,
+    enum: ["FOR_SALE","SOLD_OUT"],
+    default: "FOR_SALE",
   },
   //작성날짜
   createdAt: {
